@@ -32,7 +32,7 @@ u¿ywaj±cym GTK.
 
 %build
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
