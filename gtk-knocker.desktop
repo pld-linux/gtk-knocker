@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=gtk-knocker
+Comment=GTK-Knocker
+Comment[pl]=GTK-Knocker
+Icon=knocker_ico.xpm
+Exec=gtk-knocker 
+Terminal=0
+Type=Application
