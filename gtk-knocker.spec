@@ -1,3 +1,7 @@
+#
+# TODO:
+# - add desktop file.
+#
 Summary:	Simple port scanner using GTK
 Summary(pl):	Prosty skaner portów uzywajacy GTK
 Name:		gtk-knocker
@@ -5,10 +9,13 @@ Version:	0.6.6
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
-URL:		http://knocker.sourceforge.net/
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/knocker/%{name}-%{version}.tar.gz
+Patch0:		%{name}-am15.patch
+URL:		http://knocker.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	gtk+-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Requires:	gtk+ >= 1.2.0
 
 %description
 Knocker is a simple, versatile, and easy-to-use TCP security port
@@ -20,11 +27,15 @@ u¿ywaj±cym GTK.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-./configure
-
-%{__make} CC=%{__cc}
+rm -f missing
+aclocal
+%{__autoconf}
+%{__automake}
+%configure
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
