@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/knocker/%{name}-%{version}.tar.gz
+# Source0-md5:	2a89698689c409e44c7c1511d8196dbb
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-am15.patch
