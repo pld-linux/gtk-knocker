@@ -5,17 +5,17 @@ Version:	0.6.6
 Release:	2
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://belnet.dl.sourceforge.net/sourceforge/knocker/%{name}-%{version}.tar.gz
-# Source0-md5:	2a89698689c409e44c7c1511d8196dbb
+Source0:	http://dl.sourceforge.net/sourceforge/knocker/%{name}-%{version}.tar.gz
+# Source0-md5:	435f5bbd4c51d751336206f409e882cf
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-am15.patch
+Patch1:		%{name}-gcc33.patch
 URL:		http://knocker.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Knocker is a simple, versatile, and easy-to-use TCP security port
@@ -28,6 +28,7 @@ u¿ywaj±cym GTK.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
