@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=GTK Knocker
 Comment=Simple port scanner using GTK
-Comment[pl]=Prosty skaner portów uywajj±y GTK
+Comment[pl]=Prosty skaner portów używający GTK
 Icon=gtk-knocker.png
 Exec=gtk-knocker 
 Terminal=0
