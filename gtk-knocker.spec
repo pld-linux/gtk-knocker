@@ -7,6 +7,7 @@ License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/knocker/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
+Source2:	%{name}.png
 Patch0:		%{name}-am15.patch
 URL:		http://knocker.sourceforge.net/
 BuildRequires:	autoconf
@@ -39,12 +40,13 @@ aclocal
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_applnkdir}/Network/Misc,%{_datadir}/pixmaps}
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Network/Misc,%{_pixmapsdir}}
 
-install src/gtk-knocker		$RPM_BUILD_ROOT%{_bindir}
-install docs/gtk-knocker.1	$RPM_BUILD_ROOT%{_mandir}/man1
-install pixmaps/knocker_ico.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps/knocker_ico.xpm
-install %{SOURCE1} 		$RPM_BUILD_ROOT%{_applnkdir}/Network/Misc
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Network/Misc
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
