@@ -1,8 +1,9 @@
 [Desktop Entry]
-Name=gtk-knocker
-Comment=GTK-Knocker
-Comment[pl]=GTK-Knocker
-Icon=knocker_ico.xpm
+Name=GTK Knocker
+Comment=Simple port scanner using GTK
+Comment[pl]=Prosty skaner portów uywajj±y GTK
+Icon=gtk-knocker.png
 Exec=gtk-knocker 
 Terminal=0
 Type=Application
+# vi: encoding=utf-8
