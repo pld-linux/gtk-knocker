@@ -1,0 +1,23 @@
+--- gtk-knocker-0.6.6/Makefile.am~	Sat May 25 12:33:37 2002
++++ gtk-knocker-0.6.6/Makefile.am	Sat May 25 12:33:37 2002
+@@ -6,12 +6,6 @@
+ ## Any directories that are built and installed should go here.
+ SUBDIRS = src docs
+ 
+-## Any directories to be a part of the distribution should be listed
+-## here, as well as have a Makefile generated at the end of configure.in
+-DIST_SUBDIRS = $(SUBDIRS) docs
+-
+-SUBDIRS = src
+-
+ 
+ # All the rest of the distributed files
+ EXTRA_DIST = \
+@@ -26,7 +20,6 @@
+ 	gtk-knocker.glade
+ 
+ 
+-
+ install-data-local:
+ 	@$(NORMAL_INSTALL)
+ 	if test -d $(srcdir)/pixmaps; then \
