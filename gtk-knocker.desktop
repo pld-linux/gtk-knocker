@@ -6,5 +6,6 @@ Icon=gtk-knocker.png
 Exec=gtk-knocker 
 Terminal=false
 Type=Application
+Categories=GTK;Network;
 Encoding=UTF-8
 # vi: encoding=utf-8
