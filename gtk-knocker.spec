@@ -2,10 +2,10 @@ Summary:	Simple port scanner using GTK
 Summary(pl):	Prosty skaner portów u¿ywaj±cy GTK
 Name:		gtk-knocker
 Version:	0.6.6
-Release:	2
-License:	GPL
+Release:	3
+License:	GPL v2
 Group:		X11/Applications/Networking
-Source0:	http://dl.sourceforge.net/sourceforge/knocker/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/knocker/%{name}-%{version}.tar.gz
 # Source0-md5:	435f5bbd4c51d751336206f409e882cf
 Source1:	%{name}.desktop
 Source2:	%{name}.png
@@ -40,12 +40,12 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Network/Misc,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Network/Misc
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
@@ -55,6 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog AUTHORS BUGS TO-DO
 %attr(755,root,root) %{_bindir}/gtk-knocker
-%{_applnkdir}/Network/Misc/gtk-knocker.desktop
+%{_desktopdir}/gtk-knocker.desktop
 %{_pixmapsdir}/*
 %{_mandir}/man1/*
