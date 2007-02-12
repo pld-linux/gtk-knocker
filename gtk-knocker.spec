@@ -1,5 +1,5 @@
 Summary:	Simple port scanner using GTK
-Summary(pl):	Prosty skaner portÛw uøywaj±cy GTK
+Summary(pl.UTF-8):   Prosty skaner port√≥w u≈ºywajƒÖcy GTK
 Name:		gtk-knocker
 Version:	0.6.6
 Release:	3
@@ -21,9 +21,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Knocker is a simple, versatile, and easy-to-use TCP security port
 scanner written in C, using GTK.
 
-%description -l pl
-Knocker jest prostym, uniwersalnym i ≥atwym w uøyciu skanerem portÛw
-uøywaj±cym GTK.
+%description -l pl.UTF-8
+Knocker jest prostym, uniwersalnym i ≈Çatwym w u≈ºyciu skanerem port√≥w
+u≈ºywajƒÖcym GTK.
 
 %prep
 %setup -q
