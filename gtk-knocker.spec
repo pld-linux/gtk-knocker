@@ -1,5 +1,5 @@
 Summary:	Simple port scanner using GTK
-Summary(pl.UTF-8):   Prosty skaner portów używający GTK
+Summary(pl.UTF-8):	Prosty skaner portów używający GTK
 Name:		gtk-knocker
 Version:	0.6.6
 Release:	3
