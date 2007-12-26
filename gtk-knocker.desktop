@@ -2,10 +2,9 @@
 Name=GTK Knocker
 Comment=Simple port scanner using GTK
 Comment[pl]=Prosty skaner portów używający GTK
-Icon=gtk-knocker.png
+Icon=gtk-knocker
 Exec=gtk-knocker 
 Terminal=false
 Type=Application
 Categories=GTK;Network;
-Encoding=UTF-8
 # vi: encoding=utf-8
